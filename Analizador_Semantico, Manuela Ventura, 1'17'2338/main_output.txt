@@ -1,0 +1,58 @@
+ANALIZADOR SEMÁNTICO EN PYTHON
+========================================
+Código a analizar:
+
+    int x = 5;
+    float precio = 19.99;
+    string nombre = "Juan";
+    bool activo = true;
+    int y;
+    
+    if (x > 0) {
+        y = x + 1;
+    }
+    
+    int z = x + y;
+    float descuento = precio * 0.1;
+    
+
+========================================
+==================================================
+REPORTE DE ANÁLISIS SEMÁNTICO
+==================================================
+
+📋 TABLA DE SÍMBOLOS:
+------------------------------
+x               | int      | Línea 2   | ✓ Inicializada | ✓ Usada
+precio          | float    | Línea 3   | ✓ Inicializada | ⚠ No usada
+nombre          | string   | Línea 4   | ✓ Inicializada | ⚠ No usada
+activo          | bool     | Línea 5   | ✓ Inicializada | ⚠ No usada
+y               | int      | Línea 6   | ✓ Inicializada | ✓ Usada
+z               | int      | Línea 12  | ✓ Inicializada | ⚠ No usada
+descuento       | float    | Línea 13  | ✓ Inicializada | ⚠ No usada
+
+⚠️ ADVERTENCIAS (5):
+------------------------------
+Línea 3: Variable 'precio' declarada pero no usada
+Línea 4: Variable 'nombre' declarada pero no usada
+Línea 5: Variable 'activo' declarada pero no usada
+Línea 12: Variable 'z' declarada pero no usada
+Línea 13: Variable 'descuento' declarada pero no usada
+
+📊 RESUMEN:
+--------------------
+Variables declaradas: 7
+Errores: 0
+Advertencias: 5
+Tokens procesados: 51
+
+✅ ANÁLISIS COMPLETADO EXITOSAMENTE
+
+========================================
+¿Deseas probar con tu propio código? (s/n)
+s
+Ingresa tu código (presiona Enter dos veces para finalizar):
+int edad; edad = 25; string nombre; nombre = "Ana"; edad = "texto"; x = 5; fin
+** Process Stopped **
+
+Press Enter to exit terminal
